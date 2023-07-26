@@ -29,11 +29,11 @@ ggplot(data=scurvy)+
   labs(title = "Scurvy Remedies",
        subtitle = "In 1753, James Lind (aboard the HMS Salsibury) adminstered treatment to 12 sailors all of whom had contracted Scurvy.\n He tried 6 different remedies on the similarly afflicted sailors and then recorded the severity of these side effects after 6 days had passed. ",
        fill="Severity after 6 days",
-       alt = "A tile plot displaying the severity of the symptoms from sailors suffering from scurvy. On the x axis we have the symptoms suffered and on the y axis are the different remedies admisntered.",
+       alt = "A tile plot displaying the severity of the symptoms from sailors suffering from scurvy. On the x axis we have the symptoms suffered and on the y axis are the different remedies administered.",
        caption = "Data: medicaldata R package.")+
   scale_x_continuous(name="Symptom", 
                      breaks=1:4,
-                     labels = c("1"="Gum Rot", "2"="Skin Sores","3"="WOK","4"="Lassitude"))+
+                     labels = c("1"="Gum Rot", "2"="Skin Sores","3"="Weakness of the knees","4"="Lassitude"))+
   scale_y_continuous(name="Remedy",
                      breaks=c(1.5,3.5,5.5,7.5,9.5,11.5), 
                      labels=c("1.5"="Cider","3.5"="Dilute Sulfuric Acid","5.5"="Vinegar","7.5"="Sea Water","9.5"="Citrus","11.5"="Purgative Mix"))+
