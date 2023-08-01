@@ -20,6 +20,8 @@ states_new$state[states_new$state=="South Carolina"]<-"S.Carolina"
 
 top_states<-slice_max(.data=states_new,n=20,order_by = densty)
 
+## Plot the data
+
 ggplot(data=top_states,
        aes(x=densty,y=reorder(state,+densty),fill=state))+
   geom_vline(xintercept = c(250,500,750,1000,1250),
@@ -31,7 +33,7 @@ ggplot(data=top_states,
              size=7)+
   labs(title = "Jam-packed",
        subtitle = "The 20 most densely populated US states determined by the average number of residents per \n square mile of land. Any of the state covered by water was not included.", 
-       x="Average Residents per mile.",
+       x="Average Residents per square mile.",
        caption="Data: Wikipedia",
        alt = "A horizontal bar chart that displays the 20 most densely populated US states determined by the average number of residents per sqaure mile")+
   geom_text(aes(label=state),
